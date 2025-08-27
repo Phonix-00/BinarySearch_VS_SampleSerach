@@ -5,9 +5,11 @@ import "fmt"
 func binarySearch(arr []int, myNumber int) int {
 	low := 0
 	high := len(arr) - 1
+	var guess = 0
 	for low <= high {
 		mid := (low + high) / 2
-		guess := arr[mid]
+		guess = arr[mid]
+
 		if guess == myNumber {
 
 			return mid
@@ -25,5 +27,7 @@ func binarySearch(arr []int, myNumber int) int {
 
 func main() {
 	myList := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
-	fmt.Println(binarySearch(myList, 10))
+	fmt.Println(binarySearch(myList, 10)) // 9
+	fmt.Println(binarySearch(myList, 25)) // -1
+
 }
