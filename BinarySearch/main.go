@@ -3,10 +3,10 @@ package main
 import "fmt"
 
 func binarySearch(arr []int, myNumber int) int {
-	low := 0             // the first index == 1
-	high := len(arr) - 1 // the last index == 20
+	low := 0
+	high := len(arr) - 1
 	for low <= high {
-		mid := (low + high) / 2 // we can find the middle of the array
+		mid := (low + high) / 2
 		guess := arr[mid]
 		if guess == myNumber {
 
